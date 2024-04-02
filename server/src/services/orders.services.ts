@@ -1,24 +1,29 @@
-export const generateSummary = (lineItems, summary) => {
-    const currentOrderCounts = {
-        products: {},
-        lineItems: {}
+export const generateOrderSummary = (orderLineItems, { products, lineItems }) => {
+    const orderProductPrices = {}
+    const productCounts = {}
+
+    for (let { productId, price } of orderLineItems) {
+        productCounts[productId] = productId in productCounts ? productCounts[productId] + 1 : 1
+        orderProductPrices[productId] = price
     }
-    const uniqueProducts = { ...summary.products }
-    const uniqueLineItems = { ...summary.lineItems }
 
-    for (const { lineItemId, productId } of lineItems) {
-        if (productId in currentOrderCounts.products) {
-            currentOrderCounts.products[productId]++
-        } else {
-            currentOrderCounts.products[productId] = 1
-        }
-        console.log(currentOrderCounts.products)
-        uniqueProducts[productId] = productId in uniqueProducts ? uniqueProducts[productId] + 1 : 1
+    const lineItemCounts = {}
 
-        if (lineItemId in currentOrderCounts.lineItems) continue
-        currentOrderCounts.lineItems[lineItemId] = 1
+    const productsMapped = Object.entries(productCounts).map(([productId, quantity]) => {
+        const { lineItemId } = products[productId]
+        const { lineItemName } = lineItems[lineItemId]
+        const productPrice = orderProductPrices[productId]
 
-        uniqueLineItems[lineItemId] = lineItemId in uniqueLineItems ? uniqueLineItems[lineItemId] + 1 : 1 
-    }
-    return { products: uniqueProducts, lineItems: uniqueLineItems }
+        lineItemCounts[lineItemId] = quantity
+        return { ...products[productId], quantity, lineItemName , productPrice }
+    })
+    const lineItemsMapped = Object.entries(lineItemCounts).map(([lineItemId, quantity]) => {
+        return { lineItemId, name: lineItems[lineItemId].lineItemName, quantity }
+    })
+
+    return { products: productsMapped, lineItems: lineItemsMapped }
+}
+
+export const generateDaySummary = (orders, { products, lineItems }) => {
+    //store each product and lineItem
 }

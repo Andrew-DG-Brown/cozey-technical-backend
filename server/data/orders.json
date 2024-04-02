@@ -30,6 +30,30 @@
                 "productId": "3",
                 "productName": "Women's perfume",
                 "price": 85
+            },
+            {
+                "lineItemId": "0",
+                "productId": "0",
+                "productName": "Red Roses Bouquet",
+                "price": 50
+            },
+            {
+                "lineItemId": "0",
+                "productId": "1",
+                "productName": "Box of chocolates",
+                "price": 70
+            },
+            {
+                "lineItemId": "0",
+                "productId": "2",
+                "productName": "Love card",
+                "price": 20
+            },
+            {
+                "lineItemId": "0",
+                "productId": "3",
+                "productName": "Women's perfume",
+                "price": 85
             }
         ]
     },
