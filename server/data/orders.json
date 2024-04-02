@@ -1,0 +1,162 @@
+[
+    {
+        "orderId": "4567",
+        "orderTotal": 225,
+        "orderDate": "2022-01-01",
+        "shippingAddress": "123 Main St, Vancouver, BC",
+        "customerName": "John Doe",
+        "customerEmail": "john.doe@gmail.com",
+        "lineItems": [
+            {
+                "lineItemId": "0",
+                "productId": "0",
+                "productName": "Red Roses Bouquet",
+                "price": 50
+            },
+            {
+                "lineItemId": "0",
+                "productId": "1",
+                "productName": "Box of chocolates",
+                "price": 70
+            },
+            {
+                "lineItemId": "0",
+                "productId": "2",
+                "productName": "Love card",
+                "price": 20
+            },
+            {
+                "lineItemId": "0",
+                "productId": "3",
+                "productName": "Women's perfume",
+                "price": 85
+            }
+        ]
+    },
+    {
+        "orderId": "5687",
+        "orderTotal": 205,
+        "orderDate": "2022-01-01",
+        "shippingAddress": "65 Pleasant Rd, Toronto, ON",
+        "customerName": "Jane Austin",
+        "customerEmail": "jane.austin@hotmail.com",
+        "lineItems": [
+            {
+                "lineItemId": "1",
+                "productId": "4",
+                "productName": "Birthday cupcake",
+                "price": 10
+            },
+            {
+                "lineItemId": "1",
+                "productId": "5",
+                "productName": "$100 Visa Gift Card",
+                "price": 100
+            },
+            {
+                "lineItemId": "1",
+                "productId": "6",
+                "productName": "Birthday card",
+                "price": 20
+            },
+            {
+                "lineItemId": "2",
+                "productId": "7",
+                "productName": "Bottle of wine",
+                "price": 20
+            },
+            {
+                "lineItemId": "2",
+                "productId": "8",
+                "productName": "Fruit basket",
+                "price": 50
+            },
+            {
+                "lineItemId": "2",
+                "productId": "9",
+                "productName": "Pen",
+                "price": 5
+            }
+        ]
+    },
+    {
+        "orderId": "8475",
+        "orderTotal": 75,
+        "orderDate": "2022-01-01",
+        "shippingAddress": "52 Glendale Blvd, Montreal, QC",
+        "customerName": "Sally Johnson",
+        "customerEmail": "sally.johnson@gmail.com",
+        "lineItems": [
+            {
+                "lineItemId": "2",
+                "productId": "7",
+                "productName": "Bottle of wine",
+                "price": 20
+            },
+            {
+                "lineItemId": "2",
+                "productId": "8",
+                "productName": "Fruit basket",
+                "price": 50
+            },
+            {
+                "lineItemId": "2",
+                "productId": "9",
+                "productName": "Pen",
+                "price": 5
+            }
+        ]
+    },
+    {
+        "orderId": "0989",
+        "orderTotal": 355,
+        "orderDate": "2022-01-01",
+        "shippingAddress": "77 Bayview Ave, Toronto, ON",
+        "customerName": "Jimmy Vaughn",
+        "customerEmail": "jimmy.vaughn@hotmail.com",
+        "lineItems": [
+            {
+                "lineItemId": "0",
+                "productId": "0",
+                "productName": "Red Roses Bouquet",
+                "price": 50
+            },
+            {
+                "lineItemId": "0",
+                "productId": "1",
+                "productName": "Box of chocolates",
+                "price": 70
+            },
+            {
+                "lineItemId": "0",
+                "productId": "2",
+                "productName": "Love card",
+                "price": 20
+            },
+            {
+                "lineItemId": "0",
+                "productId": "3",
+                "productName": "Women's perfume",
+                "price": 85
+            },
+            {
+                "lineItemId": "1",
+                "productId": "4",
+                "productName": "Birthday cupcake",
+                "price": 10
+            },
+            {
+                "lineItemId": "1",
+                "productId": "5",
+                "productName": "$100 Visa Gift Card",
+                "price": 100
+            },
+            {
+                "lineItemId": "1",
+                "productId": "6",
+                "productName": "Birthday card",
+                "price": 20
+            }
+        ]
+    }
+]

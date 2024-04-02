@@ -1,0 +1,70 @@
+[
+    {
+        "lineItemId": "0",
+        "lineItemName": "Valentines Box",
+        "products": [
+            {
+                "productId": "0",
+                "warehouseShelfNum": 2,
+                "productName": "Red Roses Bouquet"
+            },
+            {
+                "productId": "1",
+                "warehouseShelfNum": 76,
+                "productName": "Box of chocolates"
+            },
+            {
+                "productId": "2",
+                "warehouseShelfNum": 45,
+                "productName": "Love card"
+            },
+            {
+                "productId": "3",
+                "warehouseShelfNum": 4,
+                "productName": "Women's perfume"
+            }
+        ]
+    },
+    {
+        "lineItemId": "1",
+        "lineItemName": "Birthday Box",
+        "products": [
+            {
+                "productId": "4",
+                "warehouseShelfNum": 79,
+                "productName": "Birthday cupcake"
+            },
+            {
+                "productId": "5",
+                "warehouseShelfNum": 62,
+                "productName": "$100 Visa Gift Card"
+            },
+            {
+                "productId": "6",
+                "warehouseShelfNum": 22,
+                "productName": "Birthday card"
+            }
+        ]
+    },
+    {
+        "lineItemId": "2",
+        "lineItemName": "Client Gift Box",
+        "products": [
+            {
+                "productId": "7",
+                "warehouseShelfNum": 25,
+                "productName": "Bottle of wine"
+            },
+            {
+                "productId": "8",
+                "warehouseShelfNum": 8,
+                "productName": "Fruit basket"
+            },
+            {
+                "productId": "9",
+                "warehouseShelfNum": 98,
+                "productName": "Pen"
+            }
+        ]
+    }
+]
