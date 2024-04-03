@@ -8,7 +8,7 @@ router.route('/:date')
     .get(async (req: Request, res: Response) => {
         try {
             const { date } = req.params
-            const data = await orders.getOrders({ date })
+            const data = await orders.getOrders(date)
             res.status(200).json(data)
         } catch (err: any) {
             console.log(err)

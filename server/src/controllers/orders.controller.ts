@@ -2,19 +2,21 @@ import db from '../utils/db.js'
 import { generateDaySummary, generateOrderSummary } from 'services/orders.services.js'
 
 export default {
-    getOrders: async ({ date = '2022-01-01'}) => {
+    getOrders: async (date) => {
         const ordersData = db.getOrders()
         const productsData = db.getProducts()
         const orders = []
-        
-        ordersData.forEach(order => {
-            if (order.orderDate != date) return;
 
-            const orderSummary = generateOrderSummary(order.lineItems, productsData)
-            delete order.lineItems
+        for (const order of ordersData) {
+            const orderClone = { ...order }
+            console.log(orderClone.orderDate, date)
+            if (orderClone.orderDate != date) continue;
 
-            orders.push({ ...order, orderSummary })
-        })
+            const orderSummary = generateOrderSummary(orderClone.lineItems, productsData)
+            delete orderClone.lineItems
+
+            orders.push({ ...orderClone, orderSummary })
+        }
         const summary = generateDaySummary(orders, productsData)
 
         return { summary, orders }
