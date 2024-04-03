@@ -7,10 +7,11 @@ import { OrdersProvider, useOrders } from '@/contexts/Orders.context';
 
 export default function Orders() {
     return (
-        <>
-            <OrdersProvider>
-                <Summary />
-            </OrdersProvider>
-        </>
+        <OrdersProvider>
+            <div className='text-[3rem] flex justify-center w-full font-semibold mb-10'>
+                <h1 className='mx-auto'>Warehouse Order Manager</h1>
+            </div>
+            <Summary />
+        </OrdersProvider>
     );
 }
