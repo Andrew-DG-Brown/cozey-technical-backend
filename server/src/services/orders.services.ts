@@ -18,12 +18,35 @@ export const generateOrderSummary = (orderLineItems, { products, lineItems }) =>
         return { ...products[productId], quantity, lineItemName , productPrice }
     })
     const lineItemsMapped = Object.entries(lineItemCounts).map(([lineItemId, quantity]) => {
-        return { lineItemId, name: lineItems[lineItemId].lineItemName, quantity }
+        const { lineItemName } = lineItems[lineItemId]
+        return { lineItemId, lineItemName, quantity }
     })
 
     return { products: productsMapped, lineItems: lineItemsMapped }
 }
 
 export const generateDaySummary = (orders, { products, lineItems }) => {
-    //store each product and lineItem
+    const totals = {
+        products: {},
+        lineItems: {},
+        checkTotals(type, quantity, id, name) {
+            if (!(id in this[type])) {
+                this[type][id] = { name, quantity }
+            } else {
+                this[type][id].quantity += quantity
+            }
+        }
+    }
+    for (const { orderSummary: { products, lineItems } } of orders) {
+        for (const i in products) {
+            const { quantity, productId, productName } = products[i]
+            totals.checkTotals('products', quantity, productId, productName)
+            
+            if (!lineItems[i]) continue
+            const { quantity: lQuantity, lineItemId, lineItemName } = lineItems[i]
+            totals.checkTotals('lineItems', lQuantity, lineItemId, lineItemName)
+        }
+    }
+
+    return { products: Object.values(totals.products), lineItems: Object.values(totals.lineItems) }
 }

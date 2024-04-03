@@ -6,20 +6,15 @@ export default {
         const ordersData = db.getOrders()
         const productsData = db.getProducts()
         const orders = []
-
-        for (const order of ordersData) {
-            if (order.orderDate != date) continue;
+        
+        ordersData.forEach(order => {
+            if (order.orderDate != date) return;
 
             const orderSummary = generateOrderSummary(order.lineItems, productsData)
             delete order.lineItems
 
-            orders.push({
-                ...order,
-                orderSummary
-            })
-        }
-
-        //calculate the summary at the end
+            orders.push({ ...order, orderSummary })
+        })
         const summary = generateDaySummary(orders, productsData)
 
         return { summary, orders }
