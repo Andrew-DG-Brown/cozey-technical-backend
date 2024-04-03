@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import Summary from './Summary';
 import { getOrders } from '@/utils/api';
 import { OrdersProvider, useOrders } from '@/contexts/Orders.context';
+import OrdersBreakdown from './OrdersBreakdown';
 
 export default function Orders() {
     return (
@@ -12,6 +13,7 @@ export default function Orders() {
                 <h1 className='mx-auto'>Warehouse Order Manager</h1>
             </div>
             <Summary />
+            <OrdersBreakdown />
         </OrdersProvider>
     );
 }
