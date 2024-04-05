@@ -1,7 +1,7 @@
 'use client'
 import { DATE_RANGES } from '@/config/constants';
 import { ValidDate, useOrders } from '@/contexts/Orders.context';
-import { Card, DatePicker, DatePickerValue, Divider, List, ListItem, Table, TableBody, TableCell, TableHead, TableHeaderCell, TableRow } from '@tremor/react';
+import { Card, DatePicker, DatePickerValue, Divider, Table, TableBody, TableCell, TableHead, TableHeaderCell, TableRow } from '@tremor/react';
 
 export default function Summary() {
     const { date, data: { summary } = {} } = useOrders()

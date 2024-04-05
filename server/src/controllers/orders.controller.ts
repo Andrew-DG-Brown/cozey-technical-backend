@@ -9,7 +9,6 @@ export default {
 
         for (const order of ordersData) {
             const orderClone = { ...order }
-            console.log(orderClone.orderDate, date)
             if (orderClone.orderDate != date) continue;
 
             const orderSummary = generateOrderSummary(orderClone.lineItems, productsData)

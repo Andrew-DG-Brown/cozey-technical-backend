@@ -1,4 +1,4 @@
-import { ObservableObject, ObservablePrimitiveBaseFns } from '@legendapp/state';
+import { ObservablePrimitiveBaseFns } from '@legendapp/state';
 import { createContext, useContext } from 'react';
 import { useObservable, useObserve } from '@legendapp/state/react';
 import { useQuery } from '@tanstack/react-query';

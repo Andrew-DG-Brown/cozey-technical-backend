@@ -37,6 +37,7 @@ export const generateDaySummary = (orders, { products, lineItems }) => {
             }
         }
     }
+    
     for (const { orderSummary: { products, lineItems } } of orders) {
         for (const i in products) {
             const { quantity, productId, productName } = products[i]

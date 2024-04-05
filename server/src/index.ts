@@ -1,7 +1,7 @@
 import App from 'app.js'
 import ordersRoute from 'routes/orders.route.js'
 
-const app = new App(Number(process.env.PORT) || 3000)
+const app = new App(Number(process.env.PORT) || 4000)
 
 const API_PREFIX = '/api/v1'
 
