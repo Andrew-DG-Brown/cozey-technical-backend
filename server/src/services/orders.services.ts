@@ -25,7 +25,7 @@ export const generateOrderSummary = (orderLineItems, { products, lineItems }) =>
     return { products: productsMapped, lineItems: lineItemsMapped }
 }
 
-export const generateDaySummary = (orders, { products, lineItems }) => {
+export const generateDaySummary = (orders) => {
     const totals = {
         products: {},
         lineItems: {},

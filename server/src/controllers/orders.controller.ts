@@ -16,7 +16,7 @@ export default {
 
             orders.push({ ...orderClone, orderSummary })
         }
-        const summary = generateDaySummary(orders, productsData)
+        const summary = generateDaySummary(orders)
 
         return { summary, orders }
     }
